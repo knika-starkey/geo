@@ -38,7 +38,14 @@
           mapLink.innerHTML =
             "Latitude:" + latitude + " °, Longitude: " + longitude + "°";
 
-          dist.innerHTML = "Расстояние: "; // Доработать
+          dist.innerHTML =
+            "Расстояние: " +
+            getDistanceFromLatLonInKm(
+              latitude,
+              longitude,
+              latitude1,
+              longitude1
+            ); // Доработать
           // перерасчет позиционирования
 
           let fromProjection = new OpenLayers.Projection("EPSG:4326"); // Transform from WGS 1984
